@@ -2,17 +2,30 @@
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
-// Bar Chart Example
+// Bar Chart Example window.appConfig.provinces
+
+
+console.log(window.appConfig.provinces)
+
+let provinces = window.appConfig.provinces;
+labels_provinces =[]
+values_provinces = []
+provinces.forEach(element => {
+  labels_provinces.push(element['name']);
+  values_provinces.push(element['value']);
+});
+
+
 var ctx = document.getElementById("myBarChart");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels:labels_provinces,
     datasets: [{
-      label: "Revenue",
+      label: "Provinces",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: values_provinces,
     }],
   },
   options: {
@@ -25,14 +38,14 @@ var myLineChart = new Chart(ctx, {
           display: false
         },
         ticks: {
-          maxTicksLimit: 6
+          maxTicksLimit: 9
         }
       }],
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
-          maxTicksLimit: 5
+          max: Math.max(...values_provinces),
+          maxTicksLimit:9
         },
         gridLines: {
           display: true

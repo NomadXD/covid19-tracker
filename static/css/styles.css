@@ -10073,28 +10073,40 @@ body {
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
     display: none;
   }
+
+  .desktop_img{
+    display: none;
+  }
+
+  .mobile_responsive{
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #mapsl{
+    height: 550px;
+    width: 100%;
+  display: inherit;
+    
+  }
+
+  #myAreaChart{
+    height: 300px;
+  }
+
+
 }
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  .desktop_img{
+    display: block;
+  }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* xxx */
 
 
 .sb-nav-fixed .sb-topnav {
@@ -10258,4 +10270,14 @@ body {
 }
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
+}
+
+#mapsl{
+  width: 100%;
+  display: inherit;
+  height:700px;
+  
+}
+
+#myAreaChart{
 }
