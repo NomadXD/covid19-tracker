@@ -24,7 +24,6 @@ total.forEach(element => {
     totalCount.push(y_axis)
 });
 let max_val = totalCount[totalCount.length-1]
-console.log(max_val)
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {

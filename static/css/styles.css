@@ -10281,3 +10281,10 @@ and (max-device-width : 1024px)  {
 
 #myAreaChart{
 }
+
+
+@media screen and (min-width: 1400px) {
+  #mapsl {
+    height: 900px;
+  }
+}

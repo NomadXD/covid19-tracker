@@ -5,7 +5,6 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 // Bar Chart Example window.appConfig.provinces
 
 
-console.log(window.appConfig.provinces)
 
 let provinces = window.appConfig.provinces;
 labels_provinces =[]
