@@ -9,7 +9,17 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Covid 19 Tracker | Sri Lanka</title>
+    <link
+      rel="shortcut icon"
+      href="../static/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="../static/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <link href="/static/css/styles.css" rel="stylesheet" />
     <link
       href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
@@ -38,10 +48,27 @@
       href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"
       rel="stylesheet"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-128210009-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-128210009-1");
+    </script>
   </head>
   <body class="sb-nav-fixed sb-sidenav-toggled">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand" href="/"><img src="../static/assets/img/bacterium.svg" style="height: 50px;"> Covid 19 Tracker | Sri Lanka</a>
+      <a class="navbar-brand" href="/"
+        ><img src="../static/assets/img/bacterium.svg" style="height: 50px;" />
+        Covid 19 Tracker | Sri Lanka</a
+      >
     </nav>
     <div id="layoutSidenav">
       <div id="layoutSidenav_content">
@@ -49,10 +76,10 @@
           <div class="container-fluid">
             <br />
             <div class="row">
-              <div class="col-xl-3 col-md-6 col-sm-6 col-6">
+              <div class="col-xl-3  col-md-6 col-sm-6 col-6">
                 <div class="card bg-primary text-white mb-4">
                   <div class="row">
-                    <div class="mobile_responsive col-12 col-md-8">
+                    <div class="mobile_responsive col-md-8 ">
                       <div class="card-body" style="color: white;">
                         <h3 style="font-size: 48px;" class="card-title">
                           {{summary['confirmed']}}
@@ -60,21 +87,23 @@
                         <p>Confirmed</p>
                       </div>
                     </div>
-                    <div class="desktop_img">
-                      <div class=" col-12 col-md-4">
-                        <br />
-                        <div style="padding-right: 15px;">
-                          <i class="fas fa-check-circle fa-5x"></i>
-                        </div>
+
+                    <div class=" col-md-4 desktop_img">
+                      <br />
+                      <div>
+                        <i
+                          style="width: 80%;"
+                          class="fas fa-check-circle fa-5x"
+                        ></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-6 col-sm-6 col-6">
+              <div class="col-xl-3  col-md-6 col-sm-6 col-6">
                 <div class="card bg-warning text-white mb-4">
                   <div class="row" style="color: black;">
-                    <div class="mobile_responsive col-12 col-md-8">
+                    <div class="mobile_responsive col-12 col-md-8 ">
                       <div class="card-body">
                         <h3 style="font-size: 48px;" class="card-title">
                           {{summary['active']}}
@@ -82,21 +111,20 @@
                         <p>Active</p>
                       </div>
                     </div>
-                    <div class="desktop_img">
-                      <div class=" col-12 col-md-4">
-                        <br />
-                        <div style="padding-right: 15px;">
-                          <i class="fab fa-creative-commons-sampling fa-5x"></i>
-                        </div>
+
+                    <div class=" col-12 col-md-4 desktop_img">
+                      <br />
+                      <div style="padding-right: 15px;">
+                        <i class="fab fa-creative-commons-sampling fa-5x"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-6 col-sm-6 col-6">
+              <div class="col-xl-3  col-md-6 col-sm-6 col-6">
                 <div class="card bg-success text-white mb-4">
                   <div class="row">
-                    <div class="mobile_responsive col-12 col-md-8">
+                    <div class="mobile_responsive col-12 col-md-8 ">
                       <div class="card-body" style="color: white;">
                         <h3 style="font-size: 48px;" class="card-title">
                           {{summary['recovered']}}
@@ -104,21 +132,20 @@
                         <p>Recovered</p>
                       </div>
                     </div>
-                    <div class="desktop_img">
-                      <div class=" col-12 col-md-4">
-                        <br />
-                        <div style="padding-right: 15px;">
-                          <i class="fas fa-heart fa-5x"></i>
-                        </div>
+
+                    <div class=" col-12 col-md-4 desktop_img">
+                      <br />
+                      <div style="padding-right: 15px;">
+                        <i class="fas fa-heart fa-5x"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-6 col-sm-6 col-6">
+              <div class="col-xl-3  col-md-6 col-sm-6 col-6">
                 <div class="card bg-danger text-white mb-4">
                   <div class="row">
-                    <div class="mobile_responsive col-12 col-md-8">
+                    <div class="mobile_responsive col-12 col-md-8 ">
                       <div class="card-body" style="color: white;">
                         <h3 style="font-size: 48px;" class="card-title">
                           {{summary['deaths']}}
@@ -126,12 +153,11 @@
                         <p>Deaths</p>
                       </div>
                     </div>
-                    <div class="desktop_img">
-                      <div class=" col-12 col-md-4">
-                        <br />
-                        <div style="padding-right: 15px;">
-                          <i class="fas fa-heart fa-5x"></i>
-                        </div>
+
+                    <div class=" col-12 col-md-4 desktop_img">
+                      <br />
+                      <div style="padding-right: 15px;">
+                        <i class="fas fa-skull-crossbones fa-5x"></i>
                       </div>
                     </div>
                   </div>
@@ -139,14 +165,12 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xl-6" >
-                <div class="card mb-4" >
+              <div class="col-xl-6">
+                <div class="card mb-4">
                   <div class="card-header">
                     <i class="fas fa-chart-area mr-1"></i>Outbreak map
                   </div>
-                  <div
-                    class="card-body "
-                    style="display: block;">
+                  <div class="card-body " style="display: block;">
                     <iframe
                       src="/static/html/map.html"
                       id="mapsl"
@@ -173,7 +197,6 @@
                   </div>
                 </div>
               </div>
-             
             </div>
 
             <div class="card mb-4">
@@ -221,12 +244,9 @@
             <div
               class="d-flex align-items-center justify-content-between small"
             >
-              <div class="text-muted">Copyright &copy; Your Website 2019</div>
+              <div class="text-muted">Copyright &copy;<a target="_blank" href="https://www.facebook.com/lahiru.udayanga.1029">Lahiru Udayanga</a> | <a href="https://www.facebook.com/chanu93" target="_blank">Chanaka De Silva</a></div>
               <div>
                 <a>Last update: {{last_update}}</a>
-                <a href="#"> Privacy Policy</a>
-                &middot;
-                <a href="#">Terms &amp; Conditions</a>
               </div>
             </div>
           </div>

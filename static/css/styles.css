@@ -10084,9 +10084,9 @@ body {
   }
 
   #mapsl{
-    height: 550px;
+    height: 500px !important;
     width: 100%;
-  display: inherit;
+    display: inherit;
     
   }
 

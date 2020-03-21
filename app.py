@@ -42,20 +42,14 @@ def render_map():
     return render_template('index.html',time=time,summary=summary,total=total,cases=cases,last_update=last_update,provinces=provinces)
 
 def read():
-    try:
-        ref = db.reference('cases')
-        arr = jsonify(ref.get())
-        return ref.get()
-    except Exception as e:
-        return f"An Error Occured: {e}"
+    ref = db.reference('cases')
+    arr = jsonify(ref.get())
+    return ref.get()
 
 def read_data():
-    try:
-        ref = db.reference('/')
-        arr = jsonify(ref.get())
-        return ref.get()
-    except Exception as e:
-        return f"An Error Occured: {e}"
+    ref = db.reference('/')
+    arr = jsonify(ref.get())
+    return ref.get()
 
 
 
