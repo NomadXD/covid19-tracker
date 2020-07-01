@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/NomadXD/covid19-tracker.git">
-    <img src="static/assets/imag/virus(1).png" alt="Logo" width="80" height="80">
+    <img src="static/assets/img/virus(1).png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Covid19-tracker</h3>
@@ -37,7 +37,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 
 
@@ -46,18 +46,16 @@
 **Covid-19 tracker is an Analytics Dashboard for the covid 19 cases reported in Sri Lanka. It uses Uber’s Hexagonal Hierarchical Spatial Index library to cluster and represent the cases based on the location**
 [![Product Name Screen Shot][product-screenshot]]
 
-The repository contain the backend code for the project Commhawk. The project comprises of 2 modules which are independently implemented for emergency alerting and incident reporting. The project is designed and implemented according to the microservices architecture. 
+The repository contain the project files for the Covid19-tracker dashboard. This is just a one night project done solely for the purpose of fun.
+All the API functions are implemented in the ***app.py*** file. ***index.html*** file in the templates folder is the view that is rendered. ***static/html/map.html*** is a dynamically generated map that contains the clusters. Clustering is done by Uber H3 library. Firebase is used as the database.     
 
 ### Built With
 
-* [NodeJS](https://nodejs.org/en/)
-* [Docker](https://www.docker.com/)
-* [RethinkDB](https://rethinkdb.com/)
-* [Postgresql](https://www.postgresql.org/)
 * [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 * [Firebase](https://firebase.google.com/)
-* [AWS](https://aws.amazon.com/)
-* [Socket.io](https://socket.io/)
+* [Uber H3](https://eng.uber.com/h3/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -67,42 +65,28 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 
-* docker
-* docker-compose
-
-Installing Docker on Ubuntu 18.04 LTS
-```sh
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
-sudo apt install docker-ce
-sudo systemctl status docker
-```
-Installing Docker-compose on Ubuntu 18.04 LTS
-
-```ssh
-sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
-```
+* Firebase account
+* Python3
+* Flask
+* Folium
+* Numpy
+* Pandas
+* H3
 
 ### Installation
  
 1. Clone the repo 
 ```sh
-git clone https://github.com/NomadXD/commhawk.git
-cd commhawk
+git clone https://github.com/NomadXD/covid19-tracker.git
+cd covid19-tracker
 ```
-2. Build the project with docker-compose
+2. Install the required packages with pip or conda
 ```sh
-docker-compose build
+pip install <package name>
 ```
-3. Start the services with docker-compose
+3. Start the server with flask run. (from the project root)
 ```sh
-docker-compose up
+flask run
 ```
 <!-- ROADMAP -->
 ## Roadmap
@@ -135,19 +119,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Lahiru Udayanga - lahiru97udayanga@gmail.com
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
 
-* Dr. Dulani Meedeniya
-Senior Lecturer,
-Department of Computer Science and Engineering,
-University of Moratuwa,
-Sri Lanka
-* Mr. Sachin Kahawala,
-Mentor,
-Department of Computer Science and Engineering,
-University of Moratuwa,
-Sri Lanka
 
 
 
