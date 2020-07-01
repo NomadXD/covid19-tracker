@@ -76,7 +76,7 @@ def generate_map_5():
     
     h3Arr = []
     for co_ordinate in latlng:
-        co_ordinate['h3'] =  lat_lng_to_h3(co_ordinate['location']['lat'],co_ordinate['location']['lng'],5)
+        co_ordinate['h3'] =  lat_lng_to_h3(co_ordinate['location']['lat'],co_ordinate['location']['lng'],6)
         h3Arr.append(co_ordinate)
 
     clusters = dict()
