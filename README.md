@@ -44,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 **Covid-19 tracker is an Analytics Dashboard for the covid 19 cases reported in Sri Lanka. It uses Uber’s Hexagonal Hierarchical Spatial Index library to cluster and represent the cases based on the location**
-[![Product Name Screen Shot]product-screenshot]
+![Product Name Screen Shot][product-screenshot]
 
 The repository contain the project files for the Covid19-tracker dashboard. This is just a one night project done solely for the purpose of fun.
 All the API functions are implemented in the ***app.py*** file. ***index.html*** file in the templates folder is the view that is rendered. ***static/html/map.html*** is a dynamically generated map that contains the clusters. Clustering is done by Uber H3 library. Firebase is used as the database.     
